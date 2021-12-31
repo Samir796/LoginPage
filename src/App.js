@@ -1,21 +1,8 @@
-import 'react-native-gesture-handler';
-import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-import LogScreen from './components/LogScreen';
-import RegisterScreen from './components/RegisterScreen';
-
-const Stack = createStackNavigator();
+import React, {Component} from 'react';
+import Root from './navigation/root';
 
 const App = () => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="LogScreen" component={LogScreen} />
-        <Stack.Screen name="Register" component={RegisterScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+  return <Root />;
 };
 
 export default App;

@@ -1,45 +1,44 @@
 import React from 'react';
 import {
-  View,
   KeyboardAvoidingView,
+  View,
   StyleSheet,
   TouchableOpacity,
   Text,
 } from 'react-native';
-import BtnSgnUp from './BtnSignUp';
-import ConfirmPass from './ConfirmPass';
-import Register from './Register';
+import Btn from './Button';
+import EmailPass from './EmailPass';
+import Login from './Login';
 
-const RegisterScreen = ({navigation}) => {
+const LogScreen = ({navigation}) => {
   return (
     <KeyboardAvoidingView style={styles.container}>
-      <Register />
+      <Login />
       <View style={styles.LogReg}>
         <View style={{flexDirection: 'row'}}>
           <TouchableOpacity
             style={styles.touchStyle}
             onPress={() => navigation.navigate('LogScreen')}>
-            <Text style={{fontSize: 18}}>Login</Text>
+            <Text
+              style={{color: '#7aabcc', fontSize: 18, borderBottomWidth: 1}}>
+              Login
+            </Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.touchStyle}
             onPress={() => navigation.navigate('Register')}>
-            <Text
-              style={{color: '#7aabcc', fontSize: 18, borderBottomWidth: 1}}>
-              Register
-            </Text>
+            <Text style={{fontSize: 18}}>Register</Text>
           </TouchableOpacity>
         </View>
       </View>
-      <ConfirmPass />
-      <BtnSgnUp />
+      <EmailPass />
+      <Btn />
     </KeyboardAvoidingView>
   );
 };
 const styles = StyleSheet.create({
   container: {
-    flex: 0.7,
-    marginTop: 35,
+    flex: 0.9,
   },
   touchStyle: {
     marginHorizontal: 20,
@@ -47,7 +46,8 @@ const styles = StyleSheet.create({
   },
   LogReg: {
     flex: 0.5,
+
     alignItems: 'center',
   },
 });
-export default RegisterScreen;
+export default LogScreen;
