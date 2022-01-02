@@ -29,7 +29,6 @@ const LogScreen = ({navigation}) => {
         </View>
       </View>
       <EmailPass />
-      <Btn name="Login" />
     </KeyboardAvoidingView>
   );
 };

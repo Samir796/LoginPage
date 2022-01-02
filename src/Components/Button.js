@@ -7,7 +7,7 @@ const Btn = props => {
       <TouchableOpacity
         onPress={props.onPress}
         style={{
-          width: '80%',
+          width: '100%',
           backgroundColor: '#0486d1',
           borderRadius: 5,
           height: 50,

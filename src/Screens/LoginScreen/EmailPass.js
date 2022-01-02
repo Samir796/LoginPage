@@ -5,6 +5,7 @@ import IconFe from 'react-native-vector-icons/Feather';
 import IconFA from 'react-native-vector-icons/FontAwesome5';
 import MyTextInput from '../../Components/MyTextInput';
 import RememberPass from '../../Components/RememberPass';
+import Btn from '../../Components/Button';
 
 const EmailPass = () => {
   const [email, setEmail] = useState('');
@@ -37,7 +38,9 @@ const EmailPass = () => {
               handleValidEmail(value);
             }}
           />
-          {emailValidError ? <Text>{emailValidError}</Text> : null}
+          {emailValidError ? (
+            <Text style={styles.Error}>{emailValidError}</Text>
+          ) : null}
         </View>
 
         <View style={styles.IconInputVIew}>
@@ -56,6 +59,7 @@ const EmailPass = () => {
         </View>
       </KeyboardAvoidingView>
       <RememberPass />
+      <Btn name="Login" />
     </View>
   );
 };
@@ -71,6 +75,9 @@ const styles = StyleSheet.create({
     right: 0,
   },
   IconInputVIew: {justifyContent: 'center'},
+  Error: {
+    color: 'red',
+  },
 });
 
 export default EmailPass;
