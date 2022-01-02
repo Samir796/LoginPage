@@ -6,48 +6,47 @@ import {
   TouchableOpacity,
   Text,
 } from 'react-native';
-import BtnSgnUp from './BtnSignUp';
+import LogRegHeadre from '../../Components/LogRegHeadre';
 import ConfirmPass from './ConfirmPass';
-import Register from './Register';
 
 const RegisterScreen = ({navigation}) => {
   return (
     <KeyboardAvoidingView style={styles.container}>
-      <Register />
+      <LogRegHeadre text="Register" />
       <View style={styles.LogReg}>
-        <View style={{flexDirection: 'row'}}>
+        <View style={styles.TouchContainer}>
           <TouchableOpacity
             style={styles.touchStyle}
             onPress={() => navigation.navigate('LogScreen')}>
-            <Text style={{fontSize: 18}}>Login</Text>
+            <Text style={styles.TextLogin}>Login</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.touchStyle}
             onPress={() => navigation.navigate('Register')}>
-            <Text
-              style={{color: '#7aabcc', fontSize: 18, borderBottomWidth: 1}}>
-              Register
-            </Text>
+            <Text style={styles.TextRegister}>Register</Text>
           </TouchableOpacity>
         </View>
       </View>
       <ConfirmPass />
-      <BtnSgnUp />
     </KeyboardAvoidingView>
   );
 };
 const styles = StyleSheet.create({
   container: {
-    flex: 0.9,
-    marginTop: 35,
+    flex: 1,
   },
   touchStyle: {
     marginHorizontal: 20,
     marginTop: 30,
   },
   LogReg: {
-    flex: 0.5,
     alignItems: 'center',
+    marginVertical: 25,
   },
+  TouchContainer: {
+    flexDirection: 'row',
+  },
+  TextRegister: {color: '#7aabcc', fontSize: 18, borderBottomWidth: 1},
+  TextLogin: {fontSize: 18},
 });
 export default RegisterScreen;

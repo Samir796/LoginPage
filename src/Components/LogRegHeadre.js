@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-const Login = () => {
+const LogRegHeadre = props => {
   return (
     <View style={styles.container}>
       <Text
@@ -11,7 +11,7 @@ const Login = () => {
           fontWeight: '900',
           color: 'black',
         }}>
-        Login
+        {props.text}
       </Text>
       <View style={{width: '60%'}}>
         <Text style={styles.textOne}>
@@ -25,9 +25,7 @@ const Login = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: 'center',
-    marginTop: 40,
   },
   textOne: {
     textAlign: 'center',
@@ -40,4 +38,5 @@ const styles = StyleSheet.create({
     color: '#4e9ec3',
   },
 });
-export default Login;
+
+export default LogRegHeadre;

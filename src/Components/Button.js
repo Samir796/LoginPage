@@ -1,10 +1,11 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, Button, StyleSheet, TouchableOpacity} from 'react-native';
 
-const BtnSgnUp = () => {
+const Btn = props => {
   return (
     <View style={styles.container}>
       <TouchableOpacity
+        onPress={props.onPress}
         style={{
           width: '80%',
           backgroundColor: '#0486d1',
@@ -14,7 +15,7 @@ const BtnSgnUp = () => {
           justifyContent: 'center',
         }}>
         <Text style={{fontSize: 21, color: '#fff', fontWeight: '300'}}>
-          Sign Up
+          {props.name}
         </Text>
       </TouchableOpacity>
     </View>
@@ -23,9 +24,8 @@ const BtnSgnUp = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
 });
-export default BtnSgnUp;
+export default Btn;
