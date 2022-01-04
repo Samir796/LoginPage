@@ -5,14 +5,19 @@ import {
   StyleSheet,
   TouchableOpacity,
   Text,
+  Keyboard,
 } from 'react-native';
-import Btn from '../../Components/Button';
 import LogRegHeadre from '../../Components/LogRegHeadre';
 import EmailPass from './EmailPass';
 
 const LogScreen = ({navigation}) => {
+  const shouldSetResponse = () => true;
+  const onRelease = () => Keyboard.dismiss();
   return (
-    <KeyboardAvoidingView style={styles.container}>
+    <KeyboardAvoidingView
+      style={styles.container}
+      onResponderRelease={onRelease}
+      onStartShouldSetResponder={shouldSetResponse}>
       <LogRegHeadre text="Login" />
       <View style={styles.LogReg}>
         <View style={styles.TouchContainer}>

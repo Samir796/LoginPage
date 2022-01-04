@@ -5,13 +5,19 @@ import {
   StyleSheet,
   TouchableOpacity,
   Text,
+  Keyboard,
 } from 'react-native';
 import LogRegHeadre from '../../Components/LogRegHeadre';
 import ConfirmPass from './ConfirmPass';
 
 const RegisterScreen = ({navigation}) => {
+  const shouldSetResponse = () => true;
+  const onRelease = () => Keyboard.dismiss();
   return (
-    <KeyboardAvoidingView style={styles.container}>
+    <KeyboardAvoidingView
+      style={styles.container}
+      onResponderRelease={onRelease}
+      onStartShouldSetResponder={shouldSetResponse}>
       <LogRegHeadre text="Register" />
       <View style={styles.LogReg}>
         <View style={styles.TouchContainer}>
