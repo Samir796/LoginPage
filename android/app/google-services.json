@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "748758971625",
+    "project_id": "fifth-howl-297912",
+    "storage_bucket": "fifth-howl-297912.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748758971625:android:983d0ec44ad11c9239ec78",
+        "android_client_info": {
+          "package_name": "com.LogPage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748758971625-2t8r6ken4ct22v32dbrgtlq2nblui01r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTioW9PPUlN8m5J8WQlo0okAFQ8FOddgo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748758971625-2t8r6ken4ct22v32dbrgtlq2nblui01r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

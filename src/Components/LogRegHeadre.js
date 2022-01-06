@@ -1,5 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
+import ModalTester from './ModalScreen';
 
 const LogRegHeadre = props => {
   return (
@@ -14,10 +16,7 @@ const LogRegHeadre = props => {
         {props.text}
       </Text>
       <View style={{width: '60%'}}>
-        <Text style={styles.textOne}>
-          By signing in you are agreeing our
-          <Text style={styles.textTwo}>Term and privacy policy</Text>
-        </Text>
+        <ModalTester />
       </View>
     </View>
   );
@@ -26,16 +25,6 @@ const LogRegHeadre = props => {
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-  },
-  textOne: {
-    textAlign: 'center',
-    fontSize: 16,
-    fontWeight: '700',
-    color: '#8d898a',
-  },
-  textTwo: {
-    lineHeight: 25,
-    color: '#4e9ec3',
   },
 });
 

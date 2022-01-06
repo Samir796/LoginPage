@@ -33,7 +33,7 @@ const LogScreen = ({navigation}) => {
           </TouchableOpacity>
         </View>
       </View>
-      <EmailPass />
+      <EmailPass onPress={() => navigation.navigate('ForgotPassword')} />
     </KeyboardAvoidingView>
   );
 };
